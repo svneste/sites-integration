@@ -17,36 +17,12 @@ export class Leads {
   @UpdateDateColumn()
   updatedAt: Date;
 
-  @Column()
-  createdLead: number;
-
-  @Column()
-  updatedLead: number;
+  @Column({ nullable: true })
+  phone: string;
 
   @Column({ nullable: true })
-  closedLead: number;
-
-  @Column()
-  idLead: number;
-
-  @Column()
-  leadName: string;
-
-  @Column()
-  responsible_user: string;
-
-  @Column()
-  status_id: string;
-
-  @Column()
-  pipeline_id: string;
-
-  @Column()
-  price: number;
+  email: string;
 
   @Column({ nullable: true })
-  invoice: number;
-
-  @Column({ nullable: true })
-  bill: number;
+  comment: string;
 }

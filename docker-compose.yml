@@ -2,7 +2,7 @@ version: "3.5"
 services: 
 
   postgres:
-    container_name: postgres
+    container_name: postgresIntegr
     image: postgres
     restart: always
     volumes:
@@ -10,10 +10,10 @@ services:
     env_file:
       - .env
     ports:
-      - 5433:5432
+      - 5438:5432
 
   adminer:
     image: adminer
     restart: always
     ports:
-      - 8082:8080
+      - 8088:8080
