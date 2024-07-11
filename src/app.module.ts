@@ -7,6 +7,9 @@ import { AuthModule } from './auth/auth.module';
 import { ConfigModule } from '@nestjs/config';
 import { config } from './config';
 import { LeadsModule } from './leads/leads.module';
+import { AccountSettingsModule } from './account-settings/account-settings.module';
+import { AccountSettingsController } from './account-settings/account-settings.controller';
+
 
 @Module({
   imports: [
@@ -24,6 +27,7 @@ import { LeadsModule } from './leads/leads.module';
     AccountsModule,
     AuthModule,
     LeadsModule,
+    AccountSettingsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -12,7 +12,7 @@ export class AuthService {
   constructor(
     private configService: ConfigService,
     @Inject(forwardRef(() => AccountsService))
-    private accountService: AccountsService,
+    private accountService: AccountsService
   ) {}
 
   async performCallback(query: AuthCallbackQuery): Promise<string> {

@@ -65,4 +65,17 @@ export class AccountsService {
 
     return api;
   }
+
+
+    // найти аккаунт и получить amoID - по которому создать коннектор
+
+    async getAccountId(id) {
+      const account = await this.accountsRepo.findOne({
+        where: {
+          hash: id,
+        } as any,
+      });
+
+      return account;
+    }
 }
